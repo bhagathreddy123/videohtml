@@ -1,0 +1,16 @@
+<%= form_for @video do |f| %> 
+<div class="form-field">
+<%= f.label :title %>
+<%= f.text_field :title %> 
+</div>
+
+<div class="form-field">
+<%= f.label :description %>
+<%= f.text_field :description %> 
+</div>
+
+<div class="form-field">
+<%= f.submit %>
+</div>
+
+<%end%>

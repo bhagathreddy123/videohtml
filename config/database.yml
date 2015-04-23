@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: root
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: videohtml_development
+
+
+test:
+  <<: *default
+  database: videohtml_test
+
+production:
+  <<: *default
+  database: videohtml_production
+  username: videohtml
+  password: <%= ENV['VIDEOHTML_DATABASE_PASSWORD'] %>

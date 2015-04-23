@@ -1,0 +1,20 @@
+<%@videos.each do |v| %>
+<div id="page-wrapper">
+<h2> Title </h2>
+<%= v.title %>
+</div>
+<div id="page-wrapper">
+<h2> Description </h2>
+<%= v.description %>
+</div>
+<div id="page-wrapper">
+<h2>  </h2>
+<%= link_to "Edit", edit_video_path(v), :class => "btn btn-primary" %>
+<%= link_to "Show", video_path(v), :class => "btn btn-primary" %>
+<%= link_to "Delete", video_path(v),:method => :delete,:data =>{:confirm => "Are you sure"}, 
+:class => "btn btn-danger" %>
+</div>
+
+<%end%>
+
+<%= link_to "New", new_video_path %> 

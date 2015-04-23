@@ -18,8 +18,10 @@ class VideosController < ApplicationController
 	def create
 		@video = Video.new(video_params)
 		if @video.save
+			      gflash success: "video was successfully created."
 			redirect_to videos_path
 		else
+			gflash :now, error: @video.errors.full_messages.join("<br/>").html_safe
 			render "new"
 		end
 	end
@@ -45,7 +47,9 @@ class VideosController < ApplicationController
 	end
 
 	def video_params
-		params.require(:video).permit!
+	#	params.require(:video).permit!
+		params.require(:video).permit(:title, :description, :media, :media_cache)
+
 	end
 
 

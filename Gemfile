@@ -29,3 +29,5 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 3.3.4'
 
 gem 'friendly_id', '5.0.3'
+gem 'carrierwave-video'
+gem "gritter", "1.1.0"

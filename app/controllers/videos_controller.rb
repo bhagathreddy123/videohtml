@@ -26,7 +26,7 @@ class VideosController < ApplicationController
 
 	def update
 
-		if @video..update(video_params)
+		if @video.update(video_params)
 			redirect_to videos_path
 		else
 			render "edit"
@@ -41,7 +41,7 @@ class VideosController < ApplicationController
 	private 
 
 	def set_video
-		@video = Video.find(params[:id])
+		@video = Video.friendly.find(params[:id])
 	end
 
 	def video_params

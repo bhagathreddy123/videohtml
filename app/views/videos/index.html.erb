@@ -7,6 +7,13 @@
 <h2> Description </h2>
 <%= v.description %>
 </div>
+<video id="video_1" class="video-js vjs-default-skin"
+controls preload="none" width="640" height="264"
+data-setup="{}">
+<source src="<%=video_tag v.media%>" />
+</video>
+<br/>
+
 <div id="page-wrapper">
 <h2>  </h2>
 <%= link_to "Edit", edit_video_path(v), :class => "btn btn-primary" %>
@@ -17,4 +24,8 @@
 
 <%end%>
 
-<%= link_to "New", new_video_path %> 
+<%= link_to "New", new_video_path %>  
+
+<script>
+videojs.options.flash.swf = "#{Rails.root}/video-js.swf";
+</script>

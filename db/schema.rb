@@ -35,4 +35,6 @@ ActiveRecord::Schema.define(version: 20150423064159) do
     t.string   "media"
   end
 
+  add_index "videos", ["slug"], name: "index_videos_on_slug", using: :btree
+
 end

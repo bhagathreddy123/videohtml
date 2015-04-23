@@ -30,4 +30,12 @@ gem 'bootstrap-sass', '~> 3.3.4'
 
 gem 'friendly_id', '5.0.3'
 gem 'carrierwave-video'
-gem "gritter", "1.1.0"
+gem "gritter", "1.1.0" 
+gem "streamio-ffmpeg"
+gem 'redis'
+gem 'redis-namespace'
+
+gem 'sidekiq'
+gem 'carrierwave_backgrounder'
+
+gem 'sinatra'
